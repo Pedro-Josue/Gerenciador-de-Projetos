@@ -6,7 +6,7 @@ public class Tarefa {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne
     private Projeto projeto;
     private String nomeTarefa;
     private String descricaoTarefa;

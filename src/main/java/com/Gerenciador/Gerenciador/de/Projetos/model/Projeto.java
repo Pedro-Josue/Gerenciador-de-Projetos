@@ -11,7 +11,7 @@ public class Projeto {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "projeto", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Tarefa> tarefas;
     private String nomeProjeto;
     private String descricaoProjeto;
